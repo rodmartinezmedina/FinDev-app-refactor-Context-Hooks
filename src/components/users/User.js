@@ -1,23 +1,27 @@
-import React, { Fragment, Component } from "react";
+import React, { Fragment, useEffect } from "react";
 import Spinner from "../layout/Spinner";
 import Repos from "../repos/Repos";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-class User extends Component {
-  componentDidMount() {
-    this.props.getUser(this.props.match.params.login);
-    this.props.getUserRepos(this.props.match.params.login);
-  }
 
-  static propTypes = {
-    loading: PropTypes.bool,
-    user: PropTypes.object.isRequired,
-    getUser: PropTypes.func.isRequired,
-    getUserRepos: PropTypes.func.isRequired,
-    repos: PropTypes.array.isRequired,
-  };
+const User = ({ user, loading, getUser, getUserRepos, repos, match }) => {
+  
+  // WITHOUT HOOKS LOOKS LIKE THIS
+  // componentDidMount() {
+  //   this.props.getUser(this.props.match.params.login);
+  //   this.props.getUserRepos(this.props.match.params.login);
+  // }
+  
+  // WITH HOOKS WE DONT USE 'this.props' anymore CAUSE WE DESTRUCTURED PROPS UP IN THE Function
+  // DECLARATION
 
-  render() {
+  useEffect(() => {
+    getUser(match.params.login);
+    getUserRepos(match.params.login);
+    //next line
+    // eslint-disable-next-line
+  }, []);
+
     const {
       name,
       avatar_url,
@@ -31,9 +35,7 @@ class User extends Component {
       public_repos,
       public_gists,
       hireable,
-    } = this.props.user;
-
-    const { loading, repos } = this.props;
+    } = user;
 
     if (loading) return <Spinner />;
 
@@ -96,7 +98,15 @@ class User extends Component {
         <Repos repos={repos} />
       </Fragment>
     );
-  }
+
 }
+
+User.propTypes = {
+  loading: PropTypes.bool,
+  user: PropTypes.object.isRequired,
+  getUser: PropTypes.func.isRequired,
+  getUserRepos: PropTypes.func.isRequired,
+  repos: PropTypes.array.isRequired,
+};
 
 export default User;
