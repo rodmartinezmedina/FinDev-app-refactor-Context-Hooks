@@ -49,12 +49,6 @@ const App = () => {
     setLoading(false);
   };
 
-  //Clear Users from State
-  const clearUsers = () => {
-    setUsers([]);
-    setLoading(false);
-  };
-
   //Set Alert if search box empty
   const showAlert = (msg, type) => {
     setAlert({ msg, type });
@@ -74,11 +68,7 @@ const App = () => {
                 path="/"
                 render={(props) => (
                   <Fragment>
-                    <Search
-                      clearUsers={clearUsers}
-                      showClear={users.length > 0 ? true : false}
-                      setAlert={showAlert}
-                    />
+                    <Search setAlert={showAlert} />
                     <Users />
                   </Fragment>
                 )}
