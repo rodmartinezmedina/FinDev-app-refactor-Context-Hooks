@@ -8,12 +8,15 @@ const Footer = ({ iconGithub, iconLinkedin }) => {
       <nav className="footer bg-secondary">
         <ul>
           <li>
-            <a href="">
+            <a href="https://github.com/rodmartinezmedina" target="_blank">
               <i className={iconGithub} /> Visit my Github
             </a>
           </li>
           <li>
-            <a href="">
+            <a
+              href="https://www.linkedin.com/in/rodrigo-martinez-medina/"
+              target="_blank"
+            >
               <i className={iconLinkedin} /> Contact me on Linkedin
             </a>
           </li>
