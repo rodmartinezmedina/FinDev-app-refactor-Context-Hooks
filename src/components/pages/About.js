@@ -13,7 +13,7 @@ const About = ({ iconGithub, iconLinkedin }) => {
       <hr />
       <br />
       <h2>About me</h2>
-      <p>Hi. I'm Rodrigo Martinez M.</p>
+      <h3>Hi. I'm Rodrigo Martinez M.</h3>
       <p>
         A FullStack MERN developer based in Barcelona, Catalunya/Spain and an
         enthusiast of new techs on web development
