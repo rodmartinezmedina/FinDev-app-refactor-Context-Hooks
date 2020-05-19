@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 /* Global Styles */
 :root {
-  /* --primary-color: #dc3545; */
-  --primary-color: #3578dc;
-  /* --dark-color: #333333; */
+  --primary-color: #182978;
+  --secondary-color: #6688cc;
+  --third-color: #acbfe6;
+  /* --fourth-color: #acbfe6; */
   --dark-color: #525252;
-  --light-color: #f4f4f4;
-  --danger-color: #dc3545;
-  --success-color: #28a745;
+  --light-color: #e2e2e2;
+  --danger-color: #e7505f;
+  --success-color: #459458;
 }
 
 * {
@@ -18,10 +19,10 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 1rem;
-  line-height: 1.6;
-  background-color: #fff;
+  line-height: 1.7;
+  background-color: white;
   color: #333;
 }
 
@@ -40,6 +41,10 @@ ul {
 
 img {
   width: 100%;
+}
+
+i {
+  margin-right: 10px;
 }
 
 /* Utilities */
@@ -114,8 +119,9 @@ img {
 /* Cards */
 .card {
   padding: 1rem;
-  border: #ccc 1px dotted;
+  border: var(--secondary-color) 1px dotted;
   margin: 0.7rem 0;
+  box-shadow: -3px 3px 4px rgb(190, 190, 190);
 }
 
 /* List */
@@ -269,6 +275,22 @@ img {
   color: #fff;
 }
 
+.btn-secondary,
+.bg-secondary,
+.badge-secondary,
+.alert-secondary {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+.btn-third,
+.bg-third,
+.badge-third,
+.alert-third {
+  background: var(--third-color);
+  color: var(--primary-color);
+}
+
 .btn-light,
 .bg-light,
 .badge-light,
@@ -312,6 +334,8 @@ img {
 
 .btn:hover {
   opacity: 0.8;
+  color: var(--primary-color);
+  background-color: var(--third-color);
 }
 
 .bg-light,
@@ -334,10 +358,10 @@ input {
   color: #888;
 }
 
-input[type='text'],
-input[type='email'],
-input[type='password'],
-input[type='date'],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
 select,
 textarea {
   display: block;
@@ -347,7 +371,7 @@ textarea {
   border: 1px solid #ccc;
 }
 
-input[type='submit'],
+input[type="submit"],
 button {
   font: inherit;
 }
@@ -391,6 +415,19 @@ table th {
 .navbar .welcome span {
   margin-right: 0.6rem;
 }
+
+.users-container {
+  display: "grid";
+  grid-template-columns: "repeat(3, 1fr)";
+  grid-gap: "1rem";
+}
+
+/* @media screen and (max-width: 800px) {
+  .boxes {
+    display: "grid",
+    gridTemplateColumns: "repeat(2, 1fr)",
+    gridGap: "1rem",
+}; */
 
 /* Mobile Styles */
 @media (max-width: 700px) {

@@ -4,7 +4,7 @@ import Repos from "../repos/Repos";
 import { Link } from "react-router-dom";
 import GithubContext from "../../contexts/github/githubContext";
 
-const User = ({ match }) => {
+const User = ({ match, iconGithub }) => {
   const githubContext = useContext(GithubContext);
 
   const { getUser, loading, user, repos, getUserRepos } = githubContext;
@@ -64,7 +64,9 @@ const User = ({ match }) => {
               <p>{bio}</p>
             </Fragment>
           )}
-          <a href={html_url} className="btn btn-dark my" target="_blank">
+
+          <a href={html_url} className="btn btn-secondary my" target="_blank">
+            <i className={iconGithub} />
             Visit Github Profile
           </a>
           <ul>
@@ -87,13 +89,17 @@ const User = ({ match }) => {
       </div>
       <div className="card text-center">
         <div className="badge badge-primary">Followers: {followers}</div>
-        <div className="badge badge-success">Following: {following}</div>
-        <div className="badge badge-danger">Public Repos: {public_repos}</div>
+        <div className="badge badge-secondary">Following: {following}</div>
+        <div className="badge badge-third">Public Repos: {public_repos}</div>
         <div className="badge badge-dark">Public Gists: {public_gists}</div>
       </div>
       <Repos repos={repos} />
     </Fragment>
   );
+};
+
+User.defaultProps = {
+  iconGithub: "fab fa-github",
 };
 
 export default User;
