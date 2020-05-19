@@ -6,7 +6,11 @@ const About = ({ iconGithub, iconLinkedin }) => {
       <h1> About this app </h1>
       <p> A simple app to find Devs on Github with the use of Github 's API </p>
 
-      <a href="https://developer.github.com/v3/" target="_blank">
+      <a
+        href="https://developer.github.com/v3/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         https://developer.github.com/v3/
       </a>
       <p> Version: 1.0 </p>
@@ -29,6 +33,7 @@ const About = ({ iconGithub, iconLinkedin }) => {
       <a
         href="https://github.com/rodmartinezmedina"
         target="_blank"
+        rel="noopener noreferrer"
         className="btn btn-secondary"
       >
         <i className={iconGithub} />
@@ -37,6 +42,7 @@ const About = ({ iconGithub, iconLinkedin }) => {
       <a
         href="https://www.linkedin.com/in/rodrigo-martinez-medina/"
         target="_blank"
+        rel="noopener noreferrer"
         className="btn btn-dark"
       >
         <i className={iconLinkedin} />

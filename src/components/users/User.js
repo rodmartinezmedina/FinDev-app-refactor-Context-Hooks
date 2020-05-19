@@ -65,7 +65,12 @@ const User = ({ match, iconGithub }) => {
             </Fragment>
           )}
 
-          <a href={html_url} className="btn btn-secondary my" target="_blank">
+          <a
+            href={html_url}
+            className="btn btn-secondary my"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className={iconGithub} />
             Visit Github Profile
           </a>
