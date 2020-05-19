@@ -51,6 +51,7 @@ i {
 .container {
   max-width: 1100px;
   margin: auto;
+  margin-top: 6rem;
   overflow: hidden;
   padding: 0 2rem;
 }
@@ -392,9 +393,11 @@ table th {
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem 2rem;
+  position: fixed;
+  top: 0;
   z-index: 1;
   width: 100%;
-  opacity: 0.9;
+  opacity: 1;
   margin-bottom: 1rem;
 }
 
@@ -413,6 +416,39 @@ table th {
 }
 
 .navbar .welcome span {
+  margin-right: 0.6rem;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+  bottom: 0;
+  position: fixed;
+  flex-shrink: 0;
+  z-index: 1;
+  width: 100%;
+  opacity: 0.96;
+  margin-top: 5rem;
+}
+
+.footer ul {
+  display: flex;
+}
+
+.footer a {
+  color: #fff;
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+}
+
+.footer a:hover {
+  color: var(--light-color);
+}
+
+.footer .welcome span {
   margin-right: 0.6rem;
 }
 
@@ -458,9 +494,17 @@ table th {
   .navbar {
     display: block;
     text-align: center;
+    margin-bottom: 3rem;
   }
 
   .navbar ul {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .footer ul {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     justify-content: center;
   }

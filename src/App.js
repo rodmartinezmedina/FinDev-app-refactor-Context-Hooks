@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 import Home from "./components/pages/Home";
 import User from "./components/users/User";
 import Alert from "./components/layout/Alert";
@@ -27,6 +28,7 @@ const App = () => {
                 <Route component={NotFound} />
               </Switch>
             </div>
+            <Footer className="footer" />
           </div>
         </Router>
       </AlertState>
