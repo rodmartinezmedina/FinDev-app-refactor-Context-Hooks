@@ -28,3 +28,5 @@ const userStyle = {
 };
 
 export default Users;
+
+//GET WEATHER INFO FROM SELECTED MUNICIPIO
