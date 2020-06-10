@@ -19,7 +19,7 @@ const App = () => {
         <Router>
           <div className="App">
             <Navbar title="FinDev" icon="fab fa-github" />
-            <div className="container">
+            <div className="big-container">
               <Alert />
               <Switch>
                 <Route exact path="/" component={Home} />

@@ -67,7 +67,7 @@ const User = ({ match, iconGithub }) => {
 
           <a
             href={html_url}
-            className="btn btn-secondary my"
+            className="btn btn-secondary"
             target="_blank"
             rel="noopener noreferrer"
           >

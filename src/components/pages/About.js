@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 
-const About = ({ iconGithub, iconLinkedin }) => {
+const About = ({ iconGithub, iconLinkedin, iconWebsite }) => {
   return (
-    <Fragment>
+    <div id="about-container">
       <h1> About this app </h1>
       <p> A simple app to find Devs on Github with the use of Github 's API </p>
 
@@ -31,13 +31,13 @@ const About = ({ iconGithub, iconLinkedin }) => {
         with CSS.
       </p>
       <a
-        href="https://github.com/rodmartinezmedina"
+        href="https://rodmartinezmedina.dev/"
         target="_blank"
         rel="noopener noreferrer"
         className="btn btn-secondary"
       >
-        <i className={iconGithub} />
-        Check my Github
+        <i className={iconWebsite} />
+        Personal Website
       </a>
       <a
         href="https://www.linkedin.com/in/rodrigo-martinez-medina/"
@@ -48,13 +48,14 @@ const About = ({ iconGithub, iconLinkedin }) => {
         <i className={iconLinkedin} />
         Find me on Linkedin
       </a>
-    </Fragment>
+    </div>
   );
 };
 
 About.defaultProps = {
   iconGithub: "fab fa-github",
   iconLinkedin: "fab fa-linkedin",
+  iconWebsite: "fas fa-globe",
 };
 
 export default About;
