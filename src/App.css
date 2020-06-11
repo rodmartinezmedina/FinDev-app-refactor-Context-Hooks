@@ -480,11 +480,48 @@ table th {
   margin-top: 80px;
 }
 
+.userpage-container {
+  margin: 70px 15px 70px 15px;
+}
+
+.users-container {
+  margin: 70px 15px 70px 15px;
+}
+
+#users-inside {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
 @media screen and (min-width: 700px) and (max-width: 870px) {
   #footer-li {
     align-items: center;
     text-align: center;
     justify-content: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .userpage-container {
+    margin: 90px 15px 60px 15px;
+  }
+
+  .users-container {
+    margin: 90px 15px 60px 15px;
+  }
+
+  #users-inside {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #users-inside {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
   }
 }
 

@@ -36,7 +36,7 @@ const User = ({ match, iconGithub }) => {
   if (loading) return <Spinner />;
 
   return (
-    <Fragment>
+    <div className="userpage-container">
       <Link to="/" className="btn btn-dark">
         Back to search
       </Link>
@@ -99,7 +99,7 @@ const User = ({ match, iconGithub }) => {
         <div className="badge badge-dark">Public Gists: {public_gists}</div>
       </div>
       <Repos repos={repos} />
-    </Fragment>
+    </div>
   );
 };
 
