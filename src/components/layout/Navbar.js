@@ -8,7 +8,8 @@ const Navbar = ({ icon, title }) => {
       <nav className="navbar bg-primary">
         <h1>
           <Link to="/">
-            <i className={icon} /> {title}
+            {/* <i className={icon} /> {title} */}
+            <img src="/images/1-sm.png" className="app-logo" />
           </Link>
         </h1>
         <ul>

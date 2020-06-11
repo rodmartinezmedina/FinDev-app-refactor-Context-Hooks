@@ -34,6 +34,7 @@ const Search = () => {
           placeholder="Search Users..."
           value={text}
           onChange={onChange}
+          className="search-input"
         />
         <input
           type="submit"

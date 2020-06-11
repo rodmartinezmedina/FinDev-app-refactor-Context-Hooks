@@ -266,7 +266,7 @@ i {
 /* Forms */
 
 form {
-  margin: 3rem 0 1.2rem 0;
+  margin: 4rem 0 1.2rem 0;
 }
 input {
   margin-top: 1rem;
@@ -318,6 +318,16 @@ table th {
   width: 100%;
   opacity: 1;
   margin-bottom: 1rem;
+}
+
+.app-logo {
+  height: 70px;
+  width: auto;
+  align-items: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: -13px;
 }
 
 .navbar ul {
@@ -462,7 +472,7 @@ table th {
   }
 
   form {
-    margin: 4rem 0 1.2rem 0;
+    margin: 6rem 0 1.2rem 0;
   }
 }
 
