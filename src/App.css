@@ -82,10 +82,6 @@ i {
   color: var(--danger-color);
 }
 
-.text-center {
-  text-align: center;
-}
-
 .text-right {
   text-align: right;
 }
@@ -178,7 +174,7 @@ i {
 
 .alert {
   padding: 0.7rem;
-  margin: 1rem 0;
+  margin: 50px 0 1rem 0;
   opacity: 0.9;
   background: var(--light-color);
   color: #333;
